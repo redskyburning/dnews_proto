@@ -1,0 +1,21 @@
+{% extends 'stream.html' %}
+
+{% block template_class %}ArticleLanding{% endblock %}
+
+{% block content_header %}
+	<h1>Topic: 'Mars'</h1>
+{% endblock %}
+
+{% block stream_featured %}
+	{% include 'cam/original-videos.html' %}
+	{% include 'cam/feature-four.html' %}
+{% endblock %}
+
+{% block stream_body %}
+	{% for i in 1..9 %}
+		{% include 'include/stream-fragment.html' %}
+	{% endfor %}
+{% endblock %}
+
+{% block rightRail %}
+{% endblock %}

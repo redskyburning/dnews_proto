@@ -1,0 +1,23 @@
+{% extends 'twoColumn.html' %}
+
+{% block template_class %}{% endblock %}
+
+{% block content_header %}
+{% endblock %}
+
+{% block content_main %}
+	<section id="content-main">
+		<div id="stream-featured">
+			{% block stream_featured %}
+			{% endblock %}
+		</div>
+		<div id="stream-body">
+			{% block stream_body %}
+			{% endblock %}
+		</div>
+	</section>
+{% endblock %}
+
+{% block rightRail %}
+{% endblock %}
+		

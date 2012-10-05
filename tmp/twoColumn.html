@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block template_class %}{% endblock %}
+
+{% block site_content %}
+	<header id="content-header">
+		{% block content_header %}
+		{% endblock %}
+	</header>
+	{% block content_main %}
+		<section id="content-main">
+		</section>
+	{% endblock %}
+	<div id="rightRail">
+		{% block rightRail %}
+		{% endblock %}
+	</div>
+{% endblock %}
