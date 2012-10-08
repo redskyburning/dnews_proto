@@ -1,0 +1,10 @@
+<div class="module {% block module_class %}{% endblock %} {{ instance_class }}">
+	{% if title %}
+		<div class="module-title">
+			{{ title }}
+		</div>
+	{% endif %}
+	{% block module_body %}
+		Module body
+	{% endblock %}
+</div>

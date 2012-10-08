@@ -1,0 +1,10 @@
+<div id="{{ id }}" class="footer-column">
+	<h2>{{ title }}</h2>
+	<ul class="footer-list">
+		{% for memberI in 1..memberCount %}
+			<li class="footer-member">
+				<a href="#">Link {{ memberI }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+</div>

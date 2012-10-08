@@ -7,8 +7,8 @@
 {% endblock %}
 
 {% block stream_featured %}
-	{% include 'cam/original-videos.html' %}
-	{% include 'cam/feature-four.html' %}
+	{% include 'cam/original-videos.html' with { 'title' : 'Dnews Original Videos', 'memberCount' : 4, 'pagination' : true } %}
+	{% include 'cam/feature-four.html' with { 'title' : 'Feature Four', 'memberCount' : 4 } %}
 {% endblock %}
 
 {% block stream_body %}
@@ -18,4 +18,9 @@
 {% endblock %}
 
 {% block rightRail %}
+	{% include 'include/ad.html' with { 'instance_class' : 'ad-x20', 'ad_txt' : 'x20' } %}
+	{% include 'cam/take-five.html' with { 'title' : 'Must Reads', 'memberCount' : 5, 'pagination' : true, 'buttons' : true } %}
+	{% include 'cam/take-five.html' with { 'title' : 'Mind Blowers', 'memberCount' : 5, 'pagination' : true, 'buttons' : true } %}
+	{% include 'cam/around-web.html' with { 'title' : 'Around the Web', 'memberCount' : 3 } %}
+	{% include 'include/ad.html' with { 'instance_class' : 'ad-adwords', 'ad_txt' : 'Google Adwords' } %}
 {% endblock %}

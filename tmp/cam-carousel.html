@@ -1,0 +1,42 @@
+{% extends 'cam.html' %}
+
+{% block module_class %}cam cam-carousel {% block cam_class %}{% endblock%}{% endblock %}
+
+{% block module_body %}
+	{% block cam_header %}{% endblock %}
+		<div class="carousel-wrap">
+			<div class="carousel-strip">
+				{% for memberI in 1..memberCount %}
+					{% block member_body %}
+						<figure class="cam-member member-{{ memberI }}">
+							<a href="#"><img class="member-hero" src="img/trans-16x9.png" /></a>
+							<figcaption class="member-caption">
+								<a href="#">Member {{ memberI }}Carousel Caption</a>
+							</figcaption>
+						</figure>
+					{% endblock %}
+				{% endfor %}
+			</div>
+		</div>
+	{% block carousel_UI %}
+		<div class="carousel-UI">
+			{% if buttons %}
+				<span class="cam-button button-prev">Prev</span>
+			{% endif %}
+			{% if pagination %}
+				<select class="carousel-pargination">
+					{% for memberI in 1..memberCount %}
+						{% block carousel_pagination_body %}
+							<option value="{{ memberI }}">Select {{ memberI }}</option>
+						{% endblock %}
+					{% endfor %}
+				</select>
+			{% endif %}
+			{% if buttons %}
+				<span class="cam-button button-next">Next</span>
+			{% endif %}
+		</div>
+	{% endblock %}
+	{% block cam_footer %}{% endblock %}
+{% endblock %}
+

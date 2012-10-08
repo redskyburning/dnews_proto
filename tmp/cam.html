@@ -1,0 +1,16 @@
+{% extends 'module.html' %}
+
+{% block module_class %}cam {% block cam_class %}{% endblock%}{% endblock %}
+
+{% block module_body %}
+	{% block cam_header %}{% endblock %}
+	{% block cam_body %}
+		{% for memberI in 1..memberCount %}
+			<div class="cam-member">
+				{% block member_body %}{% endblock %}
+			</div>
+		{% endfor %}
+	{% endblock %}
+	{% block cam_footer %}{% endblock %}
+{% endblock %}
+
