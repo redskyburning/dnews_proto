@@ -1,0 +1,22 @@
+{% extends 'cam.html' %}
+
+{% block cam_class %}cam-major-minor{% endblock%}
+
+{% block cam_body %}
+	<figure class="cam-hero">
+		<a href="#"><img class="member-hero" src="img/trans-16x9.png" /></a>
+	</figure>
+	<div class="cam-block-minors">
+		{% for memberI in 2..memberCount %}
+			<div class="cam-member">
+				<a href="#"><img class="member-hero" src="img/trans-1x1.png" /></a>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="member-title">
+		<a href="#">Member 1 Title</a>
+	</div>
+	<div class="member-description">
+		<a href="#">Member 1 Description</a>
+	</div>
+{% endblock %}
