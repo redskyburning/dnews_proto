@@ -1,0 +1,118 @@
+<h1>Slider test</h1>
+
+{% set obj = {
+	'title'			: 'test title',
+	'currentPage' 	: 0,
+	'members'		: 
+	[
+		{
+			'pageNum'	: 0,
+			'href'		: 'name.html',
+			'title' 	: 'member 0 title',
+			'body'		: 'member 0 body',
+			'src'		: 'img/trans-1x1.png'
+		},
+		{
+			'pageNum'	: 1,
+			'href'		: 'name1.html',
+			'title' 	: 'member 1 title',
+			'body'		: 'member 1 body',
+			'src'		: 'img/trans-1x1.png'
+		},
+		{
+			'pageNum'	: 2,
+			'href'		: 'name2.html',
+			'title' 	: 'member 2 title',
+			'body'		: 'member 2 body',
+			'src'		: 'img/trans-1x1.png'
+		}
+	]
+} %}
+
+<h2>First Page</h2>
+
+<h3>Buttons, pagination, deep linked</h3>
+
+{% include 'module/Slider.html' with { 'buttons' : true, 'pagination' : true, 'deepLinked' : true } %}
+
+<h3>Buttons, pagination, not deep linked</h3>
+
+{% include 'module/Slider.html' with { 'buttons' : true, 'pagination' : true, 'deepLinked' : false } %}
+
+{% set obj = {
+	'title'			: 'test title',
+	'currentPage' 	: 1,
+	'members'		: 
+	[
+		{
+			'pageNum'	: 0,
+			'href'		: 'name.html',
+			'title' 	: 'member 0 title',
+			'body'		: 'member 0 body',
+			'src'		: 'img/trans-1x1.png'
+		},
+		{
+			'pageNum'	: 1,
+			'href'		: 'name1.html',
+			'title' 	: 'member 1 title',
+			'body'		: 'member 1 body',
+			'src'		: 'img/trans-1x1.png'
+		},
+		{
+			'pageNum'	: 2,
+			'href'		: 'name2.html',
+			'title' 	: 'member 2 title',
+			'body'		: 'member 2 body',
+			'src'		: 'img/trans-1x1.png'
+		}
+	]
+} %}
+
+<h2>Middle Page</h2>
+
+<h3>Buttons, pagination, deep linked</h3>
+
+{% include 'module/Slider.html' with { 'buttons' : true, 'pagination' : true, 'deepLinked' : true } %}
+
+<h3>Buttons, pagination, not deep linked</h3>
+
+{% include 'module/Slider.html' with { 'buttons' : true, 'pagination' : true, 'deepLinked' : false } %}
+
+{% set obj = {
+	'title'			: 'test title',
+	'currentPage' 	: 2,
+	'members'		: 
+	[
+		{
+			'pageNum'	: 0,
+			'href'		: 'name.html',
+			'title' 	: 'member 0 title',
+			'body'		: 'member 0 body',
+			'src'		: 'img/trans-1x1.png'
+		},
+		{
+			'pageNum'	: 1,
+			'href'		: 'name1.html',
+			'title' 	: 'member 1 title',
+			'body'		: 'member 1 body',
+			'src'		: 'img/trans-1x1.png'
+		},
+		{
+			'pageNum'	: 2,
+			'href'		: 'name2.html',
+			'title' 	: 'member 2 title',
+			'body'		: 'member 2 body',
+			'src'		: 'img/trans-1x1.png'
+		}
+	]
+} %}
+
+<h2>Last Page</h2>
+
+<h3>Buttons, pagination, deep linked</h3>
+
+{% include 'module/Slider.html' with { 'buttons' : true, 'pagination' : true, 'deepLinked' : true } %}
+
+<h3>Buttons, pagination, not deep linked</h3>
+
+{% include 'module/Slider.html' with { 'buttons' : true, 'pagination' : true, 'deepLinked' : false } %}

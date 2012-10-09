@@ -1,0 +1,12 @@
+{% extends 'Module.html' %}
+
+{% block module_class %}module-single {% block child_class %}{% endblock %}{% endblock %}
+
+{% block module_body %}
+	{% include 'fragment/media.html' with { 
+		'fragment_src' 		: src, 
+		'fragment_title' 	: title, 
+		'fragment_body' 	: body, 
+		'fragment_href' 	: href  
+	} %}
+{% endblock %}

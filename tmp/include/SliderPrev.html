@@ -1,0 +1,8 @@
+{% set prevNum = obj.currentPage - 1 %}
+{% set prevOk = prevNum >= 0 %}
+
+{% if deepLinked %}
+	<a class="button button-prev{% if not prevOk %} disabled{% endif %}" {% if prevOk %}href="{{ obj.members[prevNum].href }}"{% endif %} {% if prevOk %}data-pageNum="{{ prevNum }}"{% endif %}>Prev</a>
+{% else %}
+	<span class="button button-prev{% if not prevOk %} disabled{% endif %}" data-pageNum="{{ prevNum }}">Prev</span>
+{% endif %}

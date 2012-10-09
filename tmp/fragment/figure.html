@@ -1,0 +1,10 @@
+<figure class="fragment-figure {{ fragment_class }}">
+	{% if fragment_href %}<a href="{{ fragment_href }}">{% endif %}
+		<img class="figure-img" {% if fragment_width %}width="{{ fragment_width }}"{% endif %} {% if fragment_height %}height="{{ fragment_height }}"{% endif %} src="{{ fragment_src }}" />
+	{% if fragment_href %}</a>{% endif %}
+	{% if fragment_body %}
+		<figcaption class="figure-caption">
+			{% if fragment_href %}<a href="{{ fragment_href }}">{% endif %}{{ fragment_body }}{% if fragment_href %}</a>{% endif %}
+		</figcaption>
+	{% endif %}
+</figure>
