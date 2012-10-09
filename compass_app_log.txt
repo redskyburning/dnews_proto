@@ -1,2 +1,59 @@
 2012-10-05 12:27:30    create css/main.css 
 2012-10-05 12:27:30    create css/normalize.css 
+2012-10-08 20:41:13    create css/root.css 
+2012-10-08 20:41:43 overwrite css/root.css 
+2012-10-08 20:43:31 overwrite css/root.css 
+2012-10-08 20:44:31 overwrite css/root.css 
+2012-10-08 20:45:15 overwrite css/root.css 
+2012-10-08 20:47:30 overwrite css/root.css 
+2012-10-08 20:49:15 overwrite css/root.css 
+2012-10-08 20:49:27 overwrite css/root.css 
+2012-10-08 20:51:45 overwrite css/root.css 
+2012-10-08 20:51:58 overwrite css/root.css 
+2012-10-08 20:52:19 overwrite css/root.css 
+2012-10-08 20:52:45 overwrite css/root.css 
+2012-10-08 20:53:06 overwrite css/root.css 
+2012-10-08 20:54:06 overwrite css/root.css 
+2012-10-08 20:54:18 overwrite css/root.css 
+2012-10-08 20:54:33 overwrite css/root.css 
+2012-10-08 21:00:33 overwrite css/root.css 
+2012-10-08 21:07:12     error scss/root.scss (Line 30: File to import not found or unreadable: stream.scss.
+Load paths:
+  C:/wamp/www/dnews_proto/scss
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/blueprint/stylesheets
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_0.12/compass-0.12.2/frameworks/compass/stylesheets
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_extensions/compass-960-plugin-f4bfe8555a7d2cae09bc/stylesheets
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_extensions/heygrady-compass-html5-boilerplate-4cc8815/stylesheets
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_extensions/compass-h5bp/stylesheets
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_extensions/thomas-mcdonald-bootstrap-sass-831f25b/vendor/assets/stylesheets
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_extensions/susy-1.0/sass
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_common/sassy-math-1.2/stylesheets
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_common/modular-scale-1.0.2/stylesheets
+  C:/Program Files (x86)/compass/compass.app/lib/ruby/compass_extensions/zurb-foundation-3.0.9/scss
+  Compass::SpriteImporter)
+2012-10-08 21:07:12 overwrite css/root.css 
+2012-10-08 21:08:04 overwrite css/root.css 
+2012-10-08 21:08:04    create css/stream.css 
+2012-10-08 21:08:10 overwrite css/root.css 
+2012-10-08 21:08:30 overwrite css/root.css 
+2012-10-08 21:10:24     error scss/root.scss (Line 11 of scss/stream.scss: Invalid CSS after "	font-weight": expected ";", was ":bold;")
+2012-10-08 21:10:24 overwrite css/root.css 
+2012-10-08 21:10:24     error scss/stream.scss (Line 11: Invalid CSS after "	font-weight": expected ";", was ":bold;")
+2012-10-08 21:10:24 overwrite css/stream.css 
+2012-10-08 21:10:33 overwrite css/root.css 
+2012-10-08 21:10:33 overwrite css/stream.css 
+2012-10-08 21:11:33 overwrite css/root.css 
+2012-10-08 21:12:04 overwrite css/root.css 
+2012-10-08 21:12:04 overwrite css/stream.css 
+2012-10-08 21:12:18 overwrite css/root.css 
+2012-10-08 21:12:18 overwrite css/stream.css 
+2012-10-08 21:12:39 overwrite css/root.css 
+2012-10-08 21:12:39 overwrite css/stream.css 
+2012-10-08 21:12:58 overwrite css/root.css 
+2012-10-08 21:12:58 overwrite css/stream.css 
+2012-10-08 21:15:13 overwrite css/root.css 
+2012-10-08 21:15:13 overwrite css/stream.css 
+2012-10-08 21:15:52 overwrite css/root.css 
+2012-10-08 21:15:52 overwrite css/stream.css 
+2012-10-08 21:17:03 overwrite css/root.css 
+2012-10-08 21:17:25 overwrite css/root.css 

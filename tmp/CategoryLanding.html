@@ -1,0 +1,19 @@
+{% extends 'TagLanding.html' %}
+
+{% block template_class %}CategoryLanding{% endblock %}
+
+{% block content_header %}
+	<h1>Space</h1>
+	CatLanding DRL goes here
+	{% comment %}
+		{% include 'cam/CatLanding-drl.html' with { 'title' : 'CatLanding DRL', 'memberCount' : 5, 'pagination' : true } %}
+	{% endcomment %}
+{% endblock %}
+
+{% block stream_featured %}
+	{% include 'cam/hero-four.html' with { 'memberCount' : 4 } %}
+	<div class="promo-block">
+		{% include 'cam-single.html' with { 'title' : 'Promo' } %}
+		{% include 'cam-single.html' with { 'title' : 'Promo' } %}
+	</div>
+{% endblock %}

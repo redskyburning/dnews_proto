@@ -3,11 +3,45 @@
 {% block template_class %}{% endblock %}
 
 {%block content_header %}
-{%block content_header %}
+	{% include 'cam/around-web.html' with { 'title' : 'Around the Web', 'memberCount' : 3 } %}
+	<div class="content-category">Category</div>
+	<h1 class="content-title">{% block content_title %}Editorial Title{% endblock %}</h1>
+	<div class="title-sub">
+		<span class="content-author">by <a href="?tmp=Author">Jack London</a></span> |
+		<span class="content-tags">Tagged <a href="?tmp=TagLanding">Tag</a> <a href="?tmp=TagLanding">Tag</a> <a href="?tmp=TagLanding">Tag</a></span>
+		<span class="content-share"><a href="#">Print</a> | <a href="#">Email</a> | <a href="#">Share</a></span>
+	</div>
+{% endblock %}
 
 {% block content_main %}
+	{% block editorial_main %}
+		<div class="editorial-wrap">
+			<div class="editorial-header">
+				{% block editorial_header %}
+					{% include 'cam-carousel.html' with { 'memberCount' : 5, 'buttons' : true } %}
+				{% endblock %}
+			</div>
+			<div class="editorial-body">
+				{% block editorial_body %}
+				{% endblock %}
+			</div>
+		</div>
+		Editorial Content
+	{% endblock %}
+	
+	{% include 'include/comments.html' %}
+	{% include 'include/ad.html' with { 'instance_class' : 'ad-adwords', 'ad_txt' : 'Google Adwords' } %}
+	
+	{% block content_more %}
+		{% include 'cam/more-explore.html' with { 'title' : 'More To Explore', 'memberCount' : 8 } %}	
+	{% endblock %}
+	
 {% endblock %}
 
 {% block rightRail %}
+	{% include 'include/ad.html' with { 'instance_class' : 'ad-x20', 'ad_txt' : 'x20' } %}
+	{% include 'cam/major-minor.html' with { 'title' : 'D Orig Vids', 'memberCount' : 4 } %}
+	{% include 'cam/take-five.html' with { 'title' : 'Must Reads', 'memberCount' : 5, 'pagination' : true, 'buttons' : true } %}
+	{% include 'cam/take-five.html' with { 'title' : 'Mind Blowers', 'memberCount' : 5, 'pagination' : true, 'buttons' : true } %}
 {% endblock %}
 		

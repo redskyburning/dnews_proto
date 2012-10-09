@@ -3,14 +3,10 @@
 {% block template_class %}AuthorLanding{% endblock %}
 
 {% block content_header %}
-	<h1>Author Landing Page</h1>
+	<img class="author-hero" src="img/trans-1x1.png" />
+	<div class="author-super">Contributor</div>
+	<h1>Jack London</h1>
 {% endblock %}
 
 {% block stream_featured %}
-{% endblock %}
-
-{% block stream_body %}
-	{% for i in 1..9 %}
-		{% include 'include/author-fragment.html' %}
-	{% endfor %}
 {% endblock %}
