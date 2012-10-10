@@ -8,6 +8,8 @@ $twig = new Twig_Environment($loader);
 
 $tmp = (isset($_GET['tmp'])) ? $_GET['tmp'].'.html' : 'base.html'; 
 
-echo $twig->render($tmp, array('the' => 'variables', 'go' => 'here'));
+include('data.php');
+
+echo $twig->render($tmp, array('data' => $data));
 
 ?>

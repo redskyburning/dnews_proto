@@ -13,7 +13,7 @@
 	Inherited:
 		buttons		: bool - whether to display buttons
 		pagination	: bool - whether to display pagination
-		deepLinked	: bool - whether slider controls page deep linking
+		linking: string - deep/span/href - type of linking to use
 		title		: string - Module title
 		
 #}
@@ -25,7 +25,7 @@
 		{% if showCount or buttonsExt %}
 			<span class="header-ui">
 				{% if buttonsExt %}
-					{% include 'include/SliderPrev.html' %}
+					{% include 'include/ButtonPrev.html' with { 'obj' : obj.members, 'currentPage' : obj.currentPage, 'linking' : linking } %}
 				{% endif %}
 				
 				{% if showCount %}
@@ -33,7 +33,7 @@
 				{% endif %}
 				
 				{% if buttonsExt %}
-					{% include 'include/SliderNext.html' %}
+					{% include 'include/ButtonNext.html' with { 'obj' : obj.members, 'currentPage' : obj.currentPage, 'linking' : linking } %}
 				{% endif %}
 			</span>
 		{% endif %}

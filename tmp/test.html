@@ -1,42 +1,14 @@
 <h1>ListGallery test</h1>
 
-{% set obj = {
-	'title'			: 'test title',
-	'currentPage' 	: 0,
-	'members'		: 
-	[
-		{
-			'pageNum'	: 0,
-			'href'		: 'name.html',
-			'title' 	: 'member 0 title',
-			'body'		: 'member 0 body',
-			'src'		: 'img/trans-1x1.png',
-			'width'		: 150,
-			'height'	: 150
-		},
-		{
-			'pageNum'	: 1,
-			'href'		: 'name1.html',
-			'title' 	: 'member 1 title',
-			'body'		: 'member 1 body',
-			'src'		: 'img/trans-1x1.png',
-			'width'		: 150,
-			'height'	: 150
-		},
-		{
-			'pageNum'	: 2,
-			'href'		: 'name2.html',
-			'title' 	: 'member 2 title',
-			'body'		: 'member 2 body',
-			'src'		: 'img/trans-1x1.png',
-			'width'		: 150,
-			'height'	: 150
-		}
-	]
-} %}
-
 <h2>First Page</h2>
 
 <h3>Buttons, pagination, deep linked</h3>
 
-{% include 'module/ListGallery.html' with { 'buttonsExt' : true, 'showCount' : true, 'buttons' : true, 'pagination' : true, 'deepLinked' : true } %}
+{% include 'module/ListGallery.html' with { 
+	'obj' 			: data.gallery, 
+	'buttonsExt' 	: true, 
+	'showCount' 	: true, 
+	'buttons' 		: true, 
+	'pagination' 	: true, 
+	'deepLinked' 	: 'deep' 
+} %}

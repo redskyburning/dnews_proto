@@ -1,0 +1,11 @@
+{% extends 'Module.html' %}
+
+{% block module_class %}Module-Slider {% block child_class %}{% endblock %}{% endblock %}
+
+{% block module_body %}
+	{% for mem in obj.members %}
+		{% block member_body %}
+			Member body
+		{% endblock %}
+	{% endfor %}
+{% endblock %}

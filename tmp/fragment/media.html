@@ -1,11 +1,13 @@
-{% if fragment_href is not defined %}{% set fragment_href = '#' %}{% endif %}
-{% if fragment_title is not defined or fragment_title == '' %}{% set fragment_title = 'Media Title' %}{% endif %}
-
 <div class="fragment_media {{ fragment_class }}">
 	{% if fragment_src %}
 		<a href="{{ fragment_href }}">
 			<img class="media-hero" {% if fragment_width %}width="{{ fragment_width }}"{% endif %} {% if fragment_height %}height="{{ fragment_height }}"{% endif %} src="{{ fragment_src }}" />
 		</a>
+	{% endif %}
+	{% if fragment_super %}
+		<div class="media-super">
+			{{ fragment_super }}
+		</div>
 	{% endif %}
 	<div class="media-title">
 		<a href="{{ fragment_href }}">{{ fragment_title }}</a>
@@ -13,6 +15,11 @@
 	{% if fragment_body %}
 		<div class="media-body">
 			<a href="{{ fragment_href }}">{{ fragment_body }}</a>
+		</div>
+	{% endif %}
+	{% if fragment_sub %}
+		<div class="media-sub">
+			{{ fragment_sub }}
 		</div>
 	{% endif %}
 </div>

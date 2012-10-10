@@ -6,7 +6,7 @@
 	Arguments:
 		buttons: bool - whether to display buttons
 		pagination: bool - whether to display pagination
-		deepLinked: bool - whether slider controls page deep linking
+		linking: string - deep/span/href - type of linking to use
 
 	Inherited:
 		title: string - Module title
@@ -33,23 +33,17 @@
 		</div>
 		<div class="slider-ui">
 			{% if buttons %}
-				{% include 'include/SliderPrev.html' %}
+				{% include 'include/ButtonPrev.html' with { 'obj' : obj.members, 'currentPage' : obj.currentPage, 'linking' : linking } %}
 			{% endif %}
 			
 			{% if pagination %}
 				<span class="pagination-wrap">
-					{% for mem in obj.members %}
-						{% if deepLinked %}
-							<a class="button button-pagination {% if mem.pageNum == obj.currentPage %}current{% endif %}" {% if mem.pageNum != obj.currentPage %}href="{{ mem.href }}"{% endif %} data-pageNum="{{ mem.pageNum }}">{{ mem.pageNum }}</a>
-						{% else %}
-							<span class="button button-pagination {% if mem.pageNum == obj.currentPage %}current{% endif %}" data-pageNum="{{ mem.pageNum }}">{{ mem.pageNum }}</span>
-						{% endif %}
-					{% endfor %}
+					{% include 'include/Pagination.html' with { 'obj' : obj.members, 'currentPage' : obj.currentPage, 'linking' : linking } %}
 				</span>
 			{% endif %}
 			
 			{% if buttons %}
-				{% include 'include/SliderNext.html' %}
+				{% include 'include/ButtonNext.html' with { 'obj' : obj.members, 'currentPage' : obj.currentPage, 'linking' : linking } %}
 			{% endif %}
 			
 		</div>

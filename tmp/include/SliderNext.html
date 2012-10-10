@@ -1,8 +1,0 @@
-{% set nextNum = obj.currentPage + 1 %}
-{% set nextOk = nextNum < obj.members|length %}
-
-{% if deepLinked %}
-	<a class="button button-next{% if not nextOk %} disabled{% endif %}" {% if nextOk %}href="{{ obj.members[nextNum].href }}"{% endif %} {% if nextOk %}data-pageNum="{{ nextNum }}"{% endif %}>Next</a>
-{% else %}
-	<span class="button button-next{% if not nextOk %} disabled{% endif %}" data-pageNum="{{ nextNum }}">Next</span>
-{% endif %}

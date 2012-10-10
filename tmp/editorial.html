@@ -18,7 +18,6 @@
 		<div class="editorial-wrap">
 			<div class="editorial-header">
 				{% block editorial_header %}
-					{% include 'cam-carousel.html' with { 'memberCount' : 5, 'buttons' : true } %}
 				{% endblock %}
 			</div>
 			<div class="editorial-body">
@@ -26,7 +25,6 @@
 				{% endblock %}
 			</div>
 		</div>
-		Editorial Content
 	{% endblock %}
 	
 	{% include 'include/comments.html' %}
