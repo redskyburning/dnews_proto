@@ -1,0 +1,12 @@
+{% extends 'module/multi.html' %}
+
+{% block child_class %}module-series inset{% endblock %}
+
+{% block member_body %} 
+	{% include 'fragment/media.html' with { 
+		'fragment_class'	: 'module-member',
+		'fragment_title'	: mem.title,
+		'fragment_href'		: mem.href,
+		'fragment_super'	: mem.type
+	} %}
+{% endblock %}

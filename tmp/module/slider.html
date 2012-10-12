@@ -1,0 +1,57 @@
+{% extends 'module.html' %}
+
+{#
+	Purpose: Slider serves as a generic base class for all carousels, sliders, etc
+
+	Arguments:
+		buttons		: bool 		- whether to display buttons
+		pagination	: bool 		- whether to display pagination
+		linking		: string 	- deep/span/href - type of linking to use
+		useTitle	: bool		- whether to use the member title in pagination
+
+	Inherited:
+		title: string - Module title
+		
+#}
+
+{% block module_class %}module-slider {% block child_class %}{% endblock %} pre{% endblock %}
+
+{% block module_body %}
+	<div class="module-body-wrap">
+		{% block slider_header %}{% endblock %}
+		<div class="slider-body">
+			<div class="slider-wrap">
+				<div class="slider-strip">
+					{% for mem in obj.members %}
+						{% block slider_member %}
+							<div class="slider-member member-{{ mem.pageNum }}">
+								{% block member_body %}
+									Slide {{ mem.pageNum }}
+								{% endblock %}
+							</div>
+						{% endblock %}
+					{% endfor %}
+				</div>
+			</div>
+			{% block slider_ui %}
+				<div class="slider-ui">
+					{% if buttons %}
+						{% include 'include/button_prev.html' with { 'obj' : obj.members, 'currentPage' : obj.currentPage, 'linking' : linking } %}
+					{% endif %}
+					
+					{% if pagination %}
+						<span class="pagination-wrap">
+							{% include 'include/pagination.html' with { 'obj' : obj.members, 'currentPage' : obj.currentPage, 'linking' : linking, 'useTitle' : useTitle } %}
+						</span>
+					{% endif %}
+					
+					{% if buttons %}
+						{% include 'include/button_next.html' with { 'obj' : obj.members, 'currentPage' : obj.currentPage, 'linking' : linking } %}
+					{% endif %}
+					
+				</div>
+			{% endblock %}
+		</div>
+		{% block slider_footer %}{% endblock %}
+	</div>
+{% endblock %}

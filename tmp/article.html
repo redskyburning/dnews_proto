@@ -1,0 +1,31 @@
+{% extends 'editorial.html' %}
+
+{% block template_class %}Article{% endblock %}
+
+{% block content_title %}Article Title{% endblock %}
+
+{% block editorial_header %}
+	{% include 'module/gallery.html' with { 
+		'obj' 			: data.orig_videos, 
+		'buttons' 		: true,
+		'title'			: false,
+		'showCount'		: false
+	} only %}
+{% endblock %}
+
+{% block editorial_body %}
+	{% include 'module/series.html' with {
+		'title'		: 'In This Series',
+		'obj'		: data.series
+	} %}
+	
+	{{ data.article.members[data.article.currentPage].body|raw }}
+	
+	<div class="editorial-pagination">
+		
+		{% include 'include/button_prev.html' with { 'obj' : data.article.members, 'currentPage' : data.article.currentPage, 'linking' : 'href' } %}
+		{% include 'include/pagination.html' with { 'obj' : data.article.members, 'currentPage' : data.article.currentPage, 'linking' : 'href' } %}
+		{% include 'include/button_next.html' with { 'obj' : data.article.members, 'currentPage' : data.article.currentPage, 'linking' : 'href' } %}
+	
+	</div>
+{% endblock %}
