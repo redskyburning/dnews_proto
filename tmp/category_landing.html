@@ -1,0 +1,19 @@
+{% extends 'tag_landing.html' %}
+
+{% block template_class %}category-landing{% endblock %}
+
+{% block content_header %}
+	<h1>Space</h1>
+	CatLanding DRL goes here
+	{#
+		{% include 'cam/CatLanding-drl.html' with { 'title' : 'CatLanding DRL', 'memberCount' : 5, 'pagination' : true } %}
+	#}
+{% endblock %}
+
+{% block stream_featured %}
+	{% include 'module/feature_four.html' with { 'obj' : data.feature_four, 'title' : false } %}
+	<div class="promo-block">
+		{% include 'module/single.html' with { 'obj' : data.featured_article, 'title' : 'Promo' } %}
+		{% include 'module/single.html' with { 'obj' : data.featured_article, 'title' : 'Promo' } %}
+	</div>
+{% endblock %}

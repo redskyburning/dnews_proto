@@ -1,0 +1,362 @@
+/********************************************************
+	
+	Module
+	Provides base styles for the modules and collects scss
+	
+*********************************************************/
+
+@import 'compass/css3';
+
+.module {
+	padding:10px;
+	border:1px solid #333;
+	margin-bottom:10px;
+}
+
+	.module-title {
+		font-size:1.2em;
+		font-weight:bold;
+		margin-bottom:10px;
+	}
+	
+/********************************************************
+	
+	Slider
+	
+*********************************************************/
+
+.module-slider {
+	
+}
+
+	.slider-wrap {
+		position:relative;
+		overflow-x:hidden;
+	}
+	
+		.slider-strip {
+			position:relative;
+			width:30000px;
+			@include display-box;
+			@include box-orient(horizontal);
+			@include box-align(start);
+			@include box-pack(start); 
+		}
+			.slider-member {
+				position:relative;
+				opacity:1;
+				margin:0px;
+				@include transition(opacity .5s .5s);
+				
+				.figure-caption {
+					position:absolute;
+					width:100%;
+					padding:5px 5px 15px;
+					bottom:0px;
+					left:0px;
+					color:#fff;
+				}
+				
+				img {
+					width:100%;
+					height:auto;
+				}
+			}
+			
+			.slider-member:nth-child(even) {
+				background:#666;
+			}
+
+			/* .pre .slider-member {
+				opacity:0;
+			} */
+
+.slider-gallery {
+	border:none;
+	padding:0px;
+	position:relative;
+	z-index:10;
+	
+	.slider-body {
+		position:relative;	
+	}
+	
+	.slider-ui {
+		.button-next, .button-prev, .pagination-wrap {
+			position:absolute;
+			bottom:0px;
+		}
+		
+		.button-next, .button-prev {
+			height:100%;
+			cursor:pointer;
+			background-color:rgba(0,0,0,0.2);
+		}
+		
+		.pagination-wrap {
+			width:100%;
+			left:0px;
+			text-align:center;
+		}
+		
+		.button-next {
+			right:0px;
+		}
+		
+		.button-left {
+			left:0px;
+		}
+	}
+}
+	
+.slider-gallery.titleOver .module-title {
+	position:absolute;
+	z-index:20;
+}
+
+.slider-carousel {
+
+	.slider-member {
+		padding:0px 2px;
+	}
+
+	.slider-ui {
+		@include display-box;
+		@include box-pack(justify); 
+		
+		> * {
+			display:block;
+		}
+	}
+}
+	
+/********************************************************
+	
+	Feature Four
+	
+*********************************************************/
+
+.module-feature-four {
+	border:none;
+	padding:0px;
+
+	.module-body-wrap {
+		@include display-box;
+		@include box-pack(justify); 
+	}
+}
+	
+/********************************************************
+	
+	Promo Block
+	
+*********************************************************/
+
+.promo-block {
+	@include display-box;
+	
+	> * {
+		@include box-flex(1);
+	}
+		
+	> *:first-child {
+		margin-right:10px;
+	}
+}
+	
+/********************************************************
+	
+	Major minor
+	
+*********************************************************/
+
+.module-major-minor {
+	img {
+		width:100%;
+		height:auto;
+	}
+	
+	.module-body-wrap {
+		@include display-box;
+		@include box-pack(justify); 
+		margin-bottom:10px;
+	
+			> * {
+				@include box-flex(1);
+				margin-left:10px;
+			}
+		
+			> *:first-child {
+				margin-left:0px;
+			}
+	}
+	
+	.major-hero {
+		margin-bottom:10px;
+	}
+}
+	
+/********************************************************
+	
+	Original Videos
+	
+*********************************************************/
+
+.module-orig-videos {
+	border:1px solid #333;
+	padding:10px;
+	
+	.module-body-wrap {
+		@include display-box;
+	
+			> * {
+				@include box-flex(1);
+			}
+		
+			> *:first-child {
+				margin-right:30px;
+				width:400px;
+			}
+		
+	}
+	
+	.figure-caption {
+		position:static;
+		color:inherit;
+	}
+	
+	.slider-ui .pagination-wrap {
+		position:static;
+		
+		.button-pagination {
+			display:block;
+			margin-bottom:10px;
+			text-align:left;
+		}
+	}
+}
+	
+/********************************************************
+	
+	Hero Multi
+	
+*********************************************************/
+
+.module-hero-multi {
+	border:1px solid #333;
+	padding:0px;
+	
+	.module-body-wrap {
+		@include display-box;
+	
+			> * {
+				@include box-flex(1);
+			}
+		
+			.module-major-wrap {
+				margin-right:10px;
+				width:300px;
+				@include box-flex(0);
+			}
+			
+			.module-minor-wrap {
+				padding:10px;
+				@include display-box;
+				@include box-orient(vertical);
+				@include box-pack(justify);
+				
+				> * {
+					@include box-flex(1);
+				}
+			}
+		
+	}
+}
+	
+/********************************************************
+	
+	More Like This
+	
+*********************************************************/
+
+.module-more-like {
+	border:none;
+	background:#999;
+	@include display-box;
+	margin:0px -10px;
+				
+	> * {
+		@include box-flex(1);
+	}
+	
+	 .module-title {
+	} 
+	
+	.module-body-wrap {
+		@include display-box;
+		/* @include box-pack(justify);  */
+		
+				
+		> * {
+			@include box-flex(1);
+			padding:0px 10px;
+			border-left:1px solid #333;
+			margin-bottom:0px;
+		}
+		
+		img {
+			background:#666;
+		}
+	}
+}
+	
+/********************************************************
+	
+	More To Explore
+	
+*********************************************************/
+
+.module-more-explore {
+
+	.module-body-wrap {
+
+		.module-member {
+			width:23.5%;
+			display:inline-block;
+			margin-right:6px;
+			margin-bottom:10px; 
+			
+		}
+	}
+}
+	
+/********************************************************
+	
+	Take Five
+	
+*********************************************************/
+
+.module-take-five {
+
+	.type-media-hero {
+	
+		.media-hero-wrap {
+			position:relative;
+			
+			.media-ordinal {
+				position:absolute;
+				left:0px;
+				bottom:0px;
+				color:#fff;
+			}
+		}
+	}
+			
+	.media-ordinal, .figure-caption {
+		font-size:40px;
+		line-height:1.1em;
+		padding:0px 10px;
+		margin:0px;
+		background:transparent;
+	}
+}

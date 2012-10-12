@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+	<h1>More to Explore Test</h1>
+
+	{% include 'module/more_explore.html' with { 'obj' : data.more_explore } %}
+{% endblock %}

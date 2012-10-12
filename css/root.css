@@ -1,3 +1,9 @@
+/********************************************************
+	
+	Root.scss
+	Collects all scss files
+	
+********************************************************/
 /* normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -535,7 +541,7 @@ table {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-/* line 17, ../scss/main.scss */
+/* line 19, ../scss/main.scss */
 html,
 button,
 input,
@@ -544,7 +550,7 @@ textarea {
   color: #222;
 }
 
-/* line 21, ../scss/main.scss */
+/* line 23, ../scss/main.scss */
 body {
   font-size: 1em;
   line-height: 1.4;
@@ -555,13 +561,13 @@ body {
  * These selection declarations have to be separate.
  * Customize the background color to match your design.
  */
-/* line 32, ../scss/main.scss */
+/* line 34, ../scss/main.scss */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
 }
 
-/* line 37, ../scss/main.scss */
+/* line 39, ../scss/main.scss */
 ::selection {
   background: #b3d4fc;
   text-shadow: none;
@@ -570,7 +576,7 @@ body {
 /*
  * A better looking default horizontal rule
  */
-/* line 46, ../scss/main.scss */
+/* line 48, ../scss/main.scss */
 hr {
   display: block;
   height: 1px;
@@ -583,7 +589,7 @@ hr {
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
-/* line 59, ../scss/main.scss */
+/* line 61, ../scss/main.scss */
 img {
   vertical-align: middle;
 }
@@ -591,7 +597,7 @@ img {
 /*
  * Remove default fieldset styles.
  */
-/* line 67, ../scss/main.scss */
+/* line 69, ../scss/main.scss */
 fieldset {
   border: 0;
   margin: 0;
@@ -601,7 +607,7 @@ fieldset {
 /*
  * Allow only vertical resizing of textareas.
  */
-/* line 77, ../scss/main.scss */
+/* line 79, ../scss/main.scss */
 textarea {
   resize: vertical;
 }
@@ -609,7 +615,7 @@ textarea {
 /* ==========================================================================
    Chrome Frame prompt
    ========================================================================== */
-/* line 85, ../scss/main.scss */
+/* line 87, ../scss/main.scss */
 .chromeframe {
   margin: 0.2em 0;
   background: #ccc;
@@ -620,13 +626,43 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* line 98, ../scss/main.scss */
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* line 104, ../scss/main.scss */
+h1, h2, h3, h4, h5, h6, p, blockquote, figure, figcaption, blockquote, div, section, article, header, footer, ul, ol, nav {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+/* line 109, ../scss/main.scss */
+div, section, article, header, footer, nav {
+  margin: 0px;
+}
+
+/* line 113, ../scss/main.scss */
+h1, h2, h3, h4, h5, h6, p, blockquote, figure, figcaption, blockquote, ul, ol {
+  margin: 0px 0px 10px 0px;
+}
+
+/* line 117, ../scss/main.scss */
+ul, ol {
+  list-style: none;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
 /*
  * Image replacement
  */
-/* line 120, ../scss/main.scss */
+/* line 143, ../scss/main.scss */
 .ir {
   background-color: transparent;
   border: 0;
@@ -635,7 +671,7 @@ textarea {
   *text-indent: -9999px;
 }
 
-/* line 128, ../scss/main.scss */
+/* line 151, ../scss/main.scss */
 .ir:before {
   content: "";
   display: block;
@@ -646,7 +682,7 @@ textarea {
 /*
  * Hide from both screenreaders and browsers: h5bp.com/u
  */
-/* line 139, ../scss/main.scss */
+/* line 162, ../scss/main.scss */
 .hidden {
   display: none !important;
   visibility: hidden;
@@ -655,7 +691,7 @@ textarea {
 /*
  * Hide only visually, but have it available for screenreaders: h5bp.com/v
  */
-/* line 148, ../scss/main.scss */
+/* line 171, ../scss/main.scss */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -671,7 +707,7 @@ textarea {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-/* line 165, ../scss/main.scss */
+/* line 188, ../scss/main.scss */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
   clip: auto;
@@ -685,7 +721,7 @@ textarea {
 /*
  * Hide visually and from screenreaders, but maintain layout
  */
-/* line 178, ../scss/main.scss */
+/* line 201, ../scss/main.scss */
 .invisible {
   visibility: hidden;
 }
@@ -701,7 +737,7 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-/* line 195, ../scss/main.scss */
+/* line 218, ../scss/main.scss */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -710,7 +746,7 @@ textarea {
   /* 2 */
 }
 
-/* line 200, ../scss/main.scss */
+/* line 223, ../scss/main.scss */
 .clearfix:after {
   clear: both;
 }
@@ -719,7 +755,7 @@ textarea {
  * For IE 6/7 only
  * Include this rule to trigger hasLayout and contain floats.
  */
-/* line 209, ../scss/main.scss */
+/* line 232, ../scss/main.scss */
 .clearfix {
   *zoom: 1;
 }
@@ -740,7 +776,7 @@ textarea {
    Inlined to avoid required HTTP connection: h5bp.com/r
    ========================================================================== */
 @media print {
-  /* line 234, ../scss/main.scss */
+  /* line 257, ../scss/main.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -749,18 +785,18 @@ textarea {
     text-shadow: none !important;
   }
 
-  /* line 242, ../scss/main.scss */
+  /* line 265, ../scss/main.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 246, ../scss/main.scss */
+  /* line 269, ../scss/main.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 250, ../scss/main.scss */
+  /* line 273, ../scss/main.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -768,33 +804,33 @@ textarea {
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 260, ../scss/main.scss */
+  /* line 283, ../scss/main.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 265, ../scss/main.scss */
+  /* line 288, ../scss/main.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 270, ../scss/main.scss */
+  /* line 293, ../scss/main.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 275, ../scss/main.scss */
+  /* line 298, ../scss/main.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 279, ../scss/main.scss */
+  /* line 302, ../scss/main.scss */
   img {
     max-width: 100% !important;
   }
@@ -803,7 +839,7 @@ textarea {
     margin: 0.5cm;
 }
 
-  /* line 289, ../scss/main.scss */
+  /* line 312, ../scss/main.scss */
   p,
   h2,
   h3 {
@@ -811,73 +847,751 @@ textarea {
     widows: 3;
   }
 
-  /* line 295, ../scss/main.scss */
+  /* line 318, ../scss/main.scss */
   h2,
   h3 {
     page-break-after: avoid;
   }
 }
-/* line 6, ../scss/root.scss */
-html {
-  background: #aaa;
-  margin: 0px;
-  padding: 0px;
+/* line 1, ../scss/text.scss */
+h1, h2 {
+  font-size: 1.5em;
 }
 
-/* line 12, ../scss/root.scss */
+/* line 5, ../scss/text.scss */
+h2 {
+  font-weight: normal;
+}
+
+/********************************************************
+	
+	Root.scss
+	Provides basic structure for the wrapper and rails
+	
+*********************************************************/
+/* line 10, ../scss/structure.scss */
+html {
+  background: #aaa;
+}
+
+/* line 14, ../scss/structure.scss */
 body {
-  margin: 0px;
-  padding: 0px 10px;
+  padding: 10px;
   width: 1000px;
   margin: 0px auto;
   background: #fff;
 }
 
-/* line 20, ../scss/root.scss */
-h1, h2, h3, h4, h5, h6 {
+/* line 21, ../scss/structure.scss */
+#content-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+}
+
+/* line 26, ../scss/structure.scss */
+#content-main, #editorial-main {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  margin-right: 10px;
+}
+
+/* line 31, ../scss/structure.scss */
+#right-rail {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -ms-box-flex: 0;
+  box-flex: 0;
+  width: 300px;
+}
+
+/********************************************************
+	
+	Site-footer
+	The footer. Duh.
+	
+*********************************************************/
+/* line 10, ../scss/site-footer.scss */
+#site-footer {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  margin-top: 20px;
+}
+
+/* line 16, ../scss/site-footer.scss */
+.footer-column {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  font-size: 10px;
+}
+/* line 20, ../scss/site-footer.scss */
+.footer-column h2 {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* line 26, ../scss/site-footer.scss */
+#our-sites {
+  -webkit-box-flex: 2;
+  -moz-box-flex: 2;
+  -ms-box-flex: 2;
+  box-flex: 2;
+}
+/* line 29, ../scss/site-footer.scss */
+#our-sites .footer-list {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -ms-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
+}
+
+/********************************************************
+	
+	Fragments
+	
+*********************************************************/
+/* line 9, ../scss/fragment.scss */
+.fragment-media {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  margin-bottom: 10px;
+}
+/* line 13, ../scss/fragment.scss */
+.fragment-media > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+/* line 17, ../scss/fragment.scss */
+.fragment-media .media-hero-wrap {
+  margin-right: 10px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+/* line 22, ../scss/fragment.scss */
+.fragment-media .media-body a {
+  font-weight: normal;
+}
+
+/* line 27, ../scss/fragment.scss */
+.fragment-media.media-vertical {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+}
+/* line 30, ../scss/fragment.scss */
+.fragment-media.media-vertical .media-hero-wrap {
+  margin-right: 0px;
+}
+
+/* line 35, ../scss/fragment.scss */
+.fragment-figure {
+  position: relative;
   margin: 0px;
 }
-
-/* line 24, ../scss/root.scss */
-a, a:hover, a:visited, a:active {
-  text-decoration: none;
-  color: inherit;
+/* line 39, ../scss/fragment.scss */
+.fragment-figure .figure-caption {
+  position: absolute;
+  bottom: 0px;
+  margin: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  display: block;
 }
-
-/* line 29, ../scss/root.scss */
-img {
-  background: #777;
-  width: 100px;
+/* line 49, ../scss/fragment.scss */
+.fragment-figure img {
+  width: 100%;
   height: auto;
 }
 
-/* line 1, ../scss/stream.scss */
-.stream-fragment {
-  font-size: 12px;
-  clear: both;
-  margin: 10px 0px;
+/********************************************************
+	
+	Module
+	Provides base styles for the modules and collects scss
+	
+*********************************************************/
+/* line 10, ../scss/module.scss */
+.module {
+  padding: 10px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
 }
 
-/* line 7, ../scss/stream.scss */
-.stream-super {
-  font-size: 11px;
-}
-
-/* line 11, ../scss/stream.scss */
-.stream-title {
-  font-size: 16px;
+/* line 16, ../scss/module.scss */
+.module-title {
+  font-size: 1.2em;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-/* line 16, ../scss/stream.scss */
-.stream-sub a {
-  font-weight: bold;
+/********************************************************
+	
+	Slider
+	
+*********************************************************/
+/* line 32, ../scss/module.scss */
+.slider-wrap {
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* line 20, ../scss/stream.scss */
-.stream-hero {
-  width: 150px;
-  height: 150px;
+/* line 37, ../scss/module.scss */
+.slider-strip {
+  position: relative;
+  width: 30000px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -ms-box-align: start;
+  box-align: start;
+  -webkit-box-pack: start;
+  -moz-box-pack: start;
+  -ms-box-pack: start;
+  box-pack: start;
+}
+
+/* line 45, ../scss/module.scss */
+.slider-member {
+  position: relative;
+  opacity: 1;
+  margin: 0px;
+  -webkit-transition: opacity 0.5s;
+  -webkit-transition-delay: 0.5s;
+  -moz-transition: opacity 0.5s 0.5s;
+  -o-transition: opacity 0.5s 0.5s;
+  transition: opacity 0.5s 0.5s;
+}
+/* line 51, ../scss/module.scss */
+.slider-member .figure-caption {
+  position: absolute;
+  width: 100%;
+  padding: 5px 5px 15px;
+  bottom: 0px;
+  left: 0px;
+  color: #fff;
+}
+/* line 60, ../scss/module.scss */
+.slider-member img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 66, ../scss/module.scss */
+.slider-member:nth-child(even) {
+  background: #666;
+}
+
+/* .pre .slider-member {
+	opacity:0;
+} */
+/* line 74, ../scss/module.scss */
+.slider-gallery {
+  border: none;
+  padding: 0px;
+  position: relative;
+  z-index: 10;
+}
+/* line 80, ../scss/module.scss */
+.slider-gallery .slider-body {
+  position: relative;
+}
+/* line 85, ../scss/module.scss */
+.slider-gallery .slider-ui .button-next, .slider-gallery .slider-ui .button-prev, .slider-gallery .slider-ui .pagination-wrap {
+  position: absolute;
+  bottom: 0px;
+}
+/* line 90, ../scss/module.scss */
+.slider-gallery .slider-ui .button-next, .slider-gallery .slider-ui .button-prev {
+  height: 100%;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+/* line 96, ../scss/module.scss */
+.slider-gallery .slider-ui .pagination-wrap {
+  width: 100%;
+  left: 0px;
+  text-align: center;
+}
+/* line 102, ../scss/module.scss */
+.slider-gallery .slider-ui .button-next {
+  right: 0px;
+}
+/* line 106, ../scss/module.scss */
+.slider-gallery .slider-ui .button-left {
+  left: 0px;
+}
+
+/* line 112, ../scss/module.scss */
+.slider-gallery.titleOver .module-title {
+  position: absolute;
+  z-index: 20;
+}
+
+/* line 119, ../scss/module.scss */
+.slider-carousel .slider-member {
+  padding: 0px 2px;
+}
+/* line 123, ../scss/module.scss */
+.slider-carousel .slider-ui {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+}
+/* line 127, ../scss/module.scss */
+.slider-carousel .slider-ui > * {
+  display: block;
+}
+
+/********************************************************
+	
+	Feature Four
+	
+*********************************************************/
+/* line 139, ../scss/module.scss */
+.module-feature-four {
+  border: none;
+  padding: 0px;
+}
+/* line 143, ../scss/module.scss */
+.module-feature-four .module-body-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+}
+
+/********************************************************
+	
+	Promo Block
+	
+*********************************************************/
+/* line 155, ../scss/module.scss */
+.promo-block {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+/* line 158, ../scss/module.scss */
+.promo-block > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+/* line 162, ../scss/module.scss */
+.promo-block > *:first-child {
+  margin-right: 10px;
+}
+
+/********************************************************
+	
+	Major minor
+	
+*********************************************************/
+/* line 174, ../scss/module.scss */
+.module-major-minor img {
+  width: 100%;
+  height: auto;
+}
+/* line 179, ../scss/module.scss */
+.module-major-minor .module-body-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+  margin-bottom: 10px;
+}
+/* line 184, ../scss/module.scss */
+.module-major-minor .module-body-wrap > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  margin-left: 10px;
+}
+/* line 189, ../scss/module.scss */
+.module-major-minor .module-body-wrap > *:first-child {
+  margin-left: 0px;
+}
+/* line 194, ../scss/module.scss */
+.module-major-minor .major-hero {
+  margin-bottom: 10px;
+}
+
+/********************************************************
+	
+	Original Videos
+	
+*********************************************************/
+/* line 205, ../scss/module.scss */
+.module-orig-videos {
+  border: 1px solid #333;
+  padding: 10px;
+}
+/* line 209, ../scss/module.scss */
+.module-orig-videos .module-body-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+/* line 212, ../scss/module.scss */
+.module-orig-videos .module-body-wrap > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+/* line 216, ../scss/module.scss */
+.module-orig-videos .module-body-wrap > *:first-child {
+  margin-right: 30px;
+  width: 400px;
+}
+/* line 223, ../scss/module.scss */
+.module-orig-videos .figure-caption {
+  position: static;
+  color: inherit;
+}
+/* line 228, ../scss/module.scss */
+.module-orig-videos .slider-ui .pagination-wrap {
+  position: static;
+}
+/* line 231, ../scss/module.scss */
+.module-orig-videos .slider-ui .pagination-wrap .button-pagination {
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/********************************************************
+	
+	Hero Multi
+	
+*********************************************************/
+/* line 245, ../scss/module.scss */
+.module-hero-multi {
+  border: 1px solid #333;
+  padding: 0px;
+}
+/* line 249, ../scss/module.scss */
+.module-hero-multi .module-body-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+}
+/* line 252, ../scss/module.scss */
+.module-hero-multi .module-body-wrap > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+/* line 256, ../scss/module.scss */
+.module-hero-multi .module-body-wrap .module-major-wrap {
+  margin-right: 10px;
+  width: 300px;
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -ms-box-flex: 0;
+  box-flex: 0;
+}
+/* line 262, ../scss/module.scss */
+.module-hero-multi .module-body-wrap .module-minor-wrap {
+  padding: 10px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+}
+/* line 268, ../scss/module.scss */
+.module-hero-multi .module-body-wrap .module-minor-wrap > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+
+/********************************************************
+	
+	More Like This
+	
+*********************************************************/
+/* line 282, ../scss/module.scss */
+.module-more-like {
+  border: none;
+  background: #999;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  margin: 0px -10px;
+}
+/* line 288, ../scss/module.scss */
+.module-more-like > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+/* line 295, ../scss/module.scss */
+.module-more-like .module-body-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  /* @include box-pack(justify);  */
+}
+/* line 300, ../scss/module.scss */
+.module-more-like .module-body-wrap > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  padding: 0px 10px;
+  border-left: 1px solid #333;
+  margin-bottom: 0px;
+}
+/* line 307, ../scss/module.scss */
+.module-more-like .module-body-wrap img {
+  background: #666;
+}
+
+/********************************************************
+	
+	More To Explore
+	
+*********************************************************/
+/* line 323, ../scss/module.scss */
+.module-more-explore .module-body-wrap .module-member {
+  width: 23.5%;
+  display: inline-block;
+  margin-right: 6px;
+  margin-bottom: 10px;
+}
+
+/********************************************************
+	
+	Take Five
+	
+*********************************************************/
+/* line 343, ../scss/module.scss */
+.module-take-five .type-media-hero .media-hero-wrap {
+  position: relative;
+}
+/* line 346, ../scss/module.scss */
+.module-take-five .type-media-hero .media-hero-wrap .media-ordinal {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  color: #fff;
+}
+/* line 355, ../scss/module.scss */
+.module-take-five .media-ordinal, .module-take-five .figure-caption {
+  font-size: 40px;
+  line-height: 1.1em;
+  padding: 0px 10px;
+  margin: 0px;
+  background: transparent;
+}
+
+/********************************************************
+	
+	Editorial
+	
+********************************************************/
+/* line 9, ../scss/editorial.scss */
+.content-share {
+  float: right;
+}
+
+/* line 13, ../scss/editorial.scss */
+.content-title {
+  margin-bottom: 0px;
+}
+
+/* line 17, ../scss/editorial.scss */
+.title-sub {
+  margin-bottom: 10px;
+}
+
+/********************************************************
+	List Structured
+********************************************************/
+/* line 28, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .module-body-wrap {
+  overflow: hidden;
+}
+/* line 32, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slider-strip {
+  margin-top: 35px;
+}
+/* line 36, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slider-header, .list-structured .gallery-listGallery .slide-title, .list-structured .gallery-listGallery .header-ui {
+  height: 35px;
+}
+/* line 40, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slider-ui .button {
+  display: block;
+  /* margin-top:$header-h;*/
+  margin: -35px 0px;
+}
+/* line 46, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slider-header {
+  text-align: right;
+  height: 35px;
+  margin-bottom: -35px;
+}
+/* line 52, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slide-title {
+  position: absolute;
+  top: -35px;
+}
+/* line 57, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .header-ui {
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-box-pack: end;
+  box-pack: end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+}
+
+/********************************************************
+	Image Gallery
+********************************************************/
+/* line 70, ../scss/editorial.scss */
+.image_gallery .header-ui {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+}
+/* line 74, ../scss/editorial.scss */
+.image_gallery .header-ui > * {
+  display: block;
+}
+
+/********************************************************
+	Article
+********************************************************/
+/* line 87, ../scss/editorial.scss */
+.editorial-body {
+  margin-left: 240px;
+}
+/* line 90, ../scss/editorial.scss */
+.editorial-body .module-series, .editorial-body blockquote, .editorial-body figure, .editorial-body aside {
   float: left;
-  margin: 0px 10px 10px 0px;
+  clear: left;
+  width: 200px;
+  margin: 0px 25px 25px;
+  margin-left: -225px;
+}
+/* line 98, ../scss/editorial.scss */
+.editorial-body .module-series {
+  border: none;
+  color: #fff;
+  background: #666;
+  padding: 0px;
+}
+/* line 104, ../scss/editorial.scss */
+.editorial-body .module-series .module-title, .editorial-body .module-series .module-member {
+  padding: 10px;
+}
+/* line 108, ../scss/editorial.scss */
+.editorial-body .module-series .module-member:nth-child(2) {
+  background: #999;
+}
+
+/* .inset {
+	float:left;
+	width:$inset-width;
+	margin:0px 0px 10px (-1 * $inset-width);
+} */
+/********************************************************
+	Temporary Fixes. Remove all this
+********************************************************/
+/* line 25, ../scss/root.scss */
+img {
+  background: #999;
+  /* width:100%;*/
+  /* min-width:100px; */
+  /* height:auto;  */
+}
+
+/* line 32, ../scss/root.scss */
+.ad {
+  padding: 0px;
+  background: #333;
+  color: #fff;
+}
+
+/* line 38, ../scss/root.scss */
+.ad-x20 {
+  width: 300px;
+  height: 250px;
 }

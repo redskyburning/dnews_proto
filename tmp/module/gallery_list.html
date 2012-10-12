@@ -1,0 +1,33 @@
+{% extends 'module/gallery.html' %}
+
+{#
+	Purpose: Gallery is intended as an image-based module, usually used as a content hero
+
+	Arguments:
+
+	Inherited:
+		buttonsExt	: bool - whether to display prev/next in the slider header
+		showCount	: bool - whether to display count (1 of 4) in the slider header
+		buttons		: bool - whether to display buttons
+		pagination	: bool - whether to display pagination
+		linking		: bool - whether slider controls page deep linking
+		title		: string - Module title
+		
+#}
+
+{% block grandchild_class %}gallery-listGallery{% endblock %}
+
+{% block slider_member %}
+	<article class="list-page slider-member member-{{ mem.pageNum }}">
+		<h1 class="slide-title"><span class='list-num'>#{{ mem.pageNum + 1 }}</span> {{ mem.title }}</h1>
+		
+		{% include 'fragment/figure.html' with {
+			'fragment_class'	: "",
+			'fragment_href'		: mem.href,
+			'fragment_src'		: mem.src,
+			'fragment_width'	: mem.width,
+			'fragment_height'	: mem.height,
+			'fragment_body'		: mem.body
+		} only %}
+	</article>
+{% endblock %}

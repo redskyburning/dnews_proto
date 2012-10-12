@@ -1,0 +1,16 @@
+{% extends 'tag_landing.html' %}
+
+{% block template_class %}author-landing{% endblock %}
+
+{% block content_header %}
+	<h1>Author Landing Page</h1>
+{% endblock %}
+
+{% block stream_featured %}
+{% endblock %}
+
+{% block stream_body %}
+	{% for i in 1..9 %}
+		{% include 'fragment/author.html' %}
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'module.html' %}
+
+{% block module_class %}module-hero-multi{% endblock %}
+
+{% block module_body %}
+	<div class="module-body-wrap">
+		<div class="module-major-wrap">
+			{% set mem = obj.members[0] %}
+			{% block hero_body %}
+				{% include 'fragment/figure.html' with {
+					fragment_src	: mem.src,
+					fragment_href	: mem.href,
+					fragment_width	: mem.width,
+					fragment_height	: mem.height,
+					fragment_body	: mem.title
+				} %}
+			{% endblock %}
+		</div>
+		<div class="module-minor-wrap">
+			{% for mem in obj.members %}
+				{% if loop.index0 > 0 %}
+					{% block member_body %}
+						{% include 'fragment/media.html' with {
+							fragment_class	: 'module-member',
+							fragment_src	: mem.src,
+							fragment_href	: mem.href,
+							fragment_width	: mem.width,
+							fragment_height	: mem.height,
+							fragment_body	: mem.body,
+							fragment_title	: mem.title
+						} %}						
+					{% endblock %}
+				{% endif %}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

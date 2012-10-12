@@ -1,0 +1,19 @@
+{% extends 'module/gallery.html' %}
+
+{% block grandchild_class %}module-orig-videos{% endblock %}
+
+{% block slider_header %}{% endblock %}
+
+{% block slider_ui %}{% endblock %}
+
+{% block slider_footer %}
+	<div class="slider-ui">		
+		{% if pagination %}
+			<span class="pagination-wrap">
+				{% include 'include/pagination.html' with { 'obj' : obj.members, 'currentPage' : obj.currentPage, 'linking' : 'span', 'useTitle' : useTitle } %}
+			</span>
+		{% endif %}		
+	</div>
+
+{% endblock %}
+

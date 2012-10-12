@@ -1,3 +1,5 @@
+@import 'compass/css3';
+
 /*
  * HTML5 Boilerplate
  *
@@ -93,7 +95,28 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+a, a:hover, a:visited, a:active {
+	color:inherit;
+	text-decoration:none;
+	font-weight:bold;
+}
 
+h1, h2, h3, h4, h5, h6, p, blockquote, figure, figcaption, blockquote, div, section, article, header, footer, ul, ol, nav  {
+	@include box-sizing(border-box);
+	padding:0px;
+}
+ 
+div, section, article, header, footer, nav {
+	margin:0px;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, figure, figcaption, blockquote, ul, ol {
+	margin:0px 0px 10px 0px;
+}
+
+ul, ol {
+	list-style:none;
+}
 
 
 

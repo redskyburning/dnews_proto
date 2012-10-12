@@ -1,0 +1,53 @@
+/********************************************************
+	
+	Fragments
+	
+*********************************************************/
+
+ @import 'compass/css3';
+
+.fragment-media {
+	@include display-box;
+	margin-bottom:10px;
+	
+	> * {
+		@include box-flex(1);
+	}
+	
+	.media-hero-wrap {
+		margin-right:10px;
+		@include box-flex(1);
+	}
+	
+	.media-body a {
+		font-weight:normal;
+	}
+}
+
+.fragment-media.media-vertical {
+	@include box-orient(vertical);
+	
+	.media-hero-wrap {
+		margin-right:0px;
+	}
+}
+
+.fragment-figure {
+	position:relative;
+	margin:0px;
+	
+	.figure-caption {
+		position:absolute;
+		bottom:0px;
+		margin:0px;
+		background:rgba(0,0,0,0.5);
+		color:#fff;
+		width:100%;
+		display:block;
+	}
+	
+	img {
+		width:100%;
+		height:auto;
+	}
+}

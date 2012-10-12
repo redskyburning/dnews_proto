@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+	<h1>Carousel test</h1>
+
+	<h2>Linking: span</h2>
+
+	{% include 'module/carousel.html' with { 'obj' : data.carousel, 'buttons' : true, 'pagination' : true, 'linking' : 'span' } %}
+
+	<h2>Linking: deep</h2>
+
+	{% include 'module/carousel.html' with { 'obj' : data.carousel, 'buttons' : true, 'pagination' : true, 'linking' : 'deep' } %}
+
+	<h2>Linking: href</h2>
+
+	{% include 'module/carousel.html' with { 'obj' : data.carousel, 'buttons' : true, 'pagination' : true, 'linking' : 'href' } %}
+{% endblock %}

@@ -1,9 +1,0 @@
-{% for mem in obj %}
-	{% if linking == 'deep' %}
-		<a class="button button-pagination {% if loop.index0 == currentPage %}current{% endif %}" {% if loop.index0 != currentPage %}href="{{ mem.href }}"{% endif %} data-pageNum="{{ loop.index0 }}">{{ loop.index }}</a>
-	{% elseif linking == 'span' %}
-		<span class="button button-pagination {% if loop.index0 == currentPage %}current{% endif %}" data-pageNum="{{ loop.index0 }}">{{ loop.index }}</span>
-	{% else %}
-		<a class="button button-pagination {% if loop.index0 == currentPage %}current{% endif %}" {% if loop.index0 != currentPage %}href="{{ mem.href }}"{% endif %}>{{ loop.index }}</a>
-	{% endif %}
-{% endfor %}

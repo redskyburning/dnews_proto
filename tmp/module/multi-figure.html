@@ -1,0 +1,14 @@
+{% extends 'module/multi.html' %}
+
+{% block child_class %}{% endblock %}
+
+{% block member_body %}
+	{% include 'fragment/figure.html' with {
+		fragment_class	: 'module-member',
+		fragment_href	: mem.href,
+		fragment_src	: mem.src,
+		fragment_body	: mem.title,
+		fragment_width	: mem.width,
+		fragment_height	: mem.height,
+	} %}
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'editorial.html' %}
+
+{% block template_class %}list-structured{% endblock %}
+
+{% block content_title %}List Title{% endblock %}
+
+{% block editorial_header %}
+	{% include 'module/gallery_list.html' with { 
+		'obj' 			: data.orig_videos, 
+		'buttons' 		: true,
+		'buttonsExt'	: true,
+		'showCount'		: true,
+		'linking'		: span,
+		'title'			: false
+	} %}
+{% endblock %}

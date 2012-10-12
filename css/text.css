@@ -1,0 +1,9 @@
+/* line 1, ../scss/text.scss */
+h1, h2 {
+  font-size: 1.5em;
+}
+
+/* line 5, ../scss/text.scss */
+h2 {
+  font-weight: normal;
+}

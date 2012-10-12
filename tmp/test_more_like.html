@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+	<h1>More Like This Test</h1>
+
+	{% include 'module/multi.html' with { 'obj' : data.more_like } %}
+{% endblock %}

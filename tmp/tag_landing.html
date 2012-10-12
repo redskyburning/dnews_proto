@@ -1,0 +1,26 @@
+{% extends 'stream.html' %}
+
+{% block template_class %}tag-landing{% endblock %}
+
+{% block content_header %}
+	<h1>All Articles Tagged 'Curiosity Rover'</h1>
+{% endblock %}
+
+{% block stream_featured %}
+	{% include 'module/hero_multi.html' with { 'obj' : data.hero_multi, 'title' : false } %}
+{% endblock %}
+
+{% block stream_body %}
+	{% for i in 1..9 %}
+		{% include 'fragment/stream.html' %}
+	{% endfor %}
+{% endblock %}
+
+{% block rightRail %}
+	{% include 'include/ad.html' with { 'instance_class' : 'ad-x20', 'ad_txt' : 'x20' } %}
+	{% include 'module/major_minor.html' with { obj : data.major_minor } %}
+	{% include 'module/take_five.html' with { 'obj' : data.take_five, 'title' : 'Must Reads', 'buttons' : true, 'pagination' : true, 'linking' : 'span' } %}
+	{% include 'module/mind_blowers.html' with { 'obj' : data.take_five, 'title' : 'Mind Blowers', 'buttons' : true, 'pagination' : true, 'linking' : 'span' } %}
+	{% include 'module/around_web.html' with { 'obj' : data.around_web } %}
+	{% include 'include/ad.html' with { 'instance_class' : 'ad-adwords', 'ad_txt' : 'Google Adwords' } %}
+{% endblock %}

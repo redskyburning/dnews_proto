@@ -1,0 +1,29 @@
+{% extends 'stream.html' %}
+
+{% block template_class %}home-stream{% endblock %}
+
+{% block content_header %}
+	<h1>Home Page - Stream View</h1>
+	{% include 'include/layout_toggle.html' %}
+{% endblock %}
+
+{% block stream_featured %}
+	{% include 'module/explore_photos.html' with { 'obj' : data.orig_videos, 'title' : 'Dnews Original Videos', 'pagination' : true, 'buttons' : true, 'titleOver' : true } %}
+{% endblock %}
+
+{% block stream_body %}
+	<div id="topic-selector">
+		By Topic: {% include 'include/pagination.html' with { 'obj' : data.home_topic.members, 'useTitle' : true, 'linking' : span } %}
+	</div>
+	{% for i in 1..9 %}
+		{% include 'fragment/stream.html' %}
+	{% endfor %}
+{% endblock %}
+
+{% block rightRail %}
+	{% include 'include/ad.html' with { 'instance_class' : 'ad-x20', 'ad_txt' : 'x20' } %}
+	{% include 'module/take_five.html' with { 'obj' : data.take_five, 'title' : 'Must Reads', 'instance_class' : 'expanded' } %}
+	{% include 'module/mind_blowers.html' with { 'obj' : data.take_five, 'title' : 'Mind Blowers', 'buttons' : true, 'pagination' : true, 'linking' : 'span' } %}
+	{% include 'module/around_web.html' with { 'obj' : data.around_web } %}
+	{% include 'include/ad.html' with { 'instance_class' : 'ad-adwords', 'ad_txt' : 'Google Adwords' } %}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'module/slider.html' %}
+
+{#
+	Purpose: Carousel is intended as an media-based module slider, often found in the right rail
+
+	Arguments:
+
+	Inherited:
+		buttons		: bool - whether to display buttons
+		pagination	: bool - whether to display pagination
+		linking: string - deep/span/href - type of linking to use
+		title		: string - Module title
+		
+#}
+
+{% block child_class %}slider-carousel {% block grandchild_class %}{% endblock %}{% endblock %}
+
+
+{% block slider_member %}
+	{% include 'fragment/media.html' with {
+		'fragment_class'	: "slider-member member-#{ loop.index0 }",
+		'fragment_href'		: mem.href,
+		'fragment_src'		: mem.src,
+		'fragment_width'	: mem.width,
+		'fragment_height'	: mem.height,
+		'fragment_body'		: mem.body,
+		'fragment_title'	: mem.title
+	} only %}
+{% endblock %}

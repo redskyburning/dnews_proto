@@ -1,0 +1,43 @@
+{% extends 'module/carousel.html' %}
+
+{% block grandchild_class %}module-take-five{% endblock %}
+
+{% block slider_member %}
+	{% if mem.type == 'media-hero' %}
+		{% include 'fragment/media.html' with {
+			'fragment_class'	: "slider-member type-media-hero member-#{ loop.index0 }",
+			'fragment_href'		: mem.href,
+			'fragment_src'		: mem.src,
+			'fragment_width'	: mem.width,
+			'fragment_height'	: mem.height,
+			'fragment_body'		: mem.body,
+			'fragment_title'	: mem.title,
+			'fragment_ordinal'	: "#{ loop.index }."
+		} only %}
+	{% elseif mem.type == 'media' %}
+		{% include 'fragment/media.html' with {
+			'fragment_class'	: "slider-member type-media-hero member-#{ loop.index0 }",
+			'fragment_href'		: mem.href,
+			'fragment_body'		: mem.body,
+			'fragment_title'	: mem.title,
+			'fragment_ordinal'	: "#{ loop.index }."
+		} only %}
+	{% elseif mem.type == 'quote' %}
+		{% include 'fragment/media.html' with {
+			'fragment_class'	: "slider-member type-quote member-#{ loop.index0 }",
+			'fragment_href'		: mem.href,
+			'fragment_body'		: "- #{ mem.title }",
+			'fragment_title'	: "&quot;#{ mem.body }&quot;",
+			'fragment_ordinal'	: "#{ loop.index }."
+		} only %}
+	{% elseif mem.type == 'figure' %}
+		{% include 'fragment/figure.html' with {
+			'fragment_class'	: "slider-member type-figure member-#{ loop.index0 }",
+			'fragment_href'		: mem.href,
+			'fragment_src'		: mem.src,
+			'fragment_width'	: mem.width,
+			'fragment_height'	: mem.height,
+			'fragment_body'		: "#{ loop.index }."
+		} only %}
+	{% endif %}
+{% endblock %}

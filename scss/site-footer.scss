@@ -1,0 +1,32 @@
+/********************************************************
+	
+	Site-footer
+	The footer. Duh.
+	
+*********************************************************/
+
+@import 'compass/css3';
+
+#site-footer {
+	@include display-box;
+	@include box-orient(horizontal);
+	margin-top:20px;
+}
+
+	.footer-column {
+		@include box-flex(1);
+		font-size:10px;
+		
+		h2 {
+			font-size:16px;
+			font-weight:normal;
+		}
+	}
+	
+	#our-sites {
+		@include box-flex(2);
+		
+		.footer-list {
+			@include column-count(2);
+		}
+	}

@@ -1,0 +1,48 @@
+/********************************************************
+	
+	Root.scss
+	Provides basic structure for the wrapper and rails
+	
+*********************************************************/
+/* line 10, ../scss/structure.scss */
+html {
+  background: #aaa;
+}
+
+/* line 14, ../scss/structure.scss */
+body {
+  padding: 10px;
+  width: 1000px;
+  margin: 0px auto;
+  background: #fff;
+}
+
+/* line 21, ../scss/structure.scss */
+#content-wrap {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+}
+
+/* line 26, ../scss/structure.scss */
+#content-main, #editorial-main {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+  margin-right: 10px;
+}
+
+/* line 31, ../scss/structure.scss */
+#right-rail {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  -ms-box-flex: 0;
+  box-flex: 0;
+  width: 300px;
+}

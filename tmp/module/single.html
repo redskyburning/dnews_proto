@@ -1,12 +1,13 @@
-{% extends 'Module.html' %}
+{% extends 'module.html' %}
 
 {% block module_class %}module-single {% block child_class %}{% endblock %}{% endblock %}
 
 {% block module_body %}
+	{% set mem = obj.members[0] %}
 	{% include 'fragment/media.html' with { 
-		'fragment_src' 		: src, 
-		'fragment_title' 	: title, 
-		'fragment_body' 	: body, 
-		'fragment_href' 	: href  
+		'fragment_src' 		: mem.src, 
+		'fragment_title' 	: mem.title, 
+		'fragment_body' 	: mem.body, 
+		'fragment_href' 	: mem.href  
 	} %}
 {% endblock %}

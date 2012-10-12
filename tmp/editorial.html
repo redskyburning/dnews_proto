@@ -1,9 +1,9 @@
-{% extends 'twoColumn.html' %}
+{% extends 'two_column.html' %}
 
 {% block template_class %}{% endblock %}
 
 {%block content_header %}
-	{% include 'cam/around-web.html' with { 'title' : 'Around the Web', 'memberCount' : 3 } %}
+	{% include 'module/more_like.html' with { 'obj' : data.more_like } %}
 	<div class="content-category">Category</div>
 	<h1 class="content-title">{% block content_title %}Editorial Title{% endblock %}</h1>
 	<div class="title-sub">
@@ -15,7 +15,7 @@
 
 {% block content_main %}
 	{% block editorial_main %}
-		<div class="editorial-wrap">
+		<div id="editorial-main">
 			<div class="editorial-header">
 				{% block editorial_header %}
 				{% endblock %}
@@ -24,22 +24,24 @@
 				{% block editorial_body %}
 				{% endblock %}
 			</div>
+	
+			{% include 'include/comments.html' %}
+			{% include 'include/ad.html' with { 'instance_class' : 'ad-adwords', 'ad_txt' : 'Google Adwords' } %}
+			
+			{% block content_more %}
+				{% include 'module/more_explore.html' with { 'obj' : data.more_explore } %}	
+			{% endblock %}
+	
 		</div>
-	{% endblock %}
-	
-	{% include 'include/comments.html' %}
-	{% include 'include/ad.html' with { 'instance_class' : 'ad-adwords', 'ad_txt' : 'Google Adwords' } %}
-	
-	{% block content_more %}
-		{% include 'cam/more-explore.html' with { 'title' : 'More To Explore', 'memberCount' : 8 } %}	
 	{% endblock %}
 	
 {% endblock %}
 
 {% block rightRail %}
 	{% include 'include/ad.html' with { 'instance_class' : 'ad-x20', 'ad_txt' : 'x20' } %}
-	{% include 'cam/major-minor.html' with { 'title' : 'D Orig Vids', 'memberCount' : 4 } %}
-	{% include 'cam/take-five.html' with { 'title' : 'Must Reads', 'memberCount' : 5, 'pagination' : true, 'buttons' : true } %}
-	{% include 'cam/take-five.html' with { 'title' : 'Mind Blowers', 'memberCount' : 5, 'pagination' : true, 'buttons' : true } %}
+	{% include 'module/major_minor.html' with { obj : data.major_minor } %}
+	{% include 'module/take_five.html' with { 'obj' : data.take_five, 'title' : 'Must Reads', 'buttons' : true, 'pagination' : true, 'linking' : 'span' } %}
+	{% include 'module/mind_blowers.html' with { 'obj' : data.take_five, 'title' : 'Mind Blowers', 'buttons' : true, 'pagination' : true, 'linking' : 'span' } %}
+	{% include 'module/around_web.html' with { 'obj' : data.around_web } %}
 {% endblock %}
 		

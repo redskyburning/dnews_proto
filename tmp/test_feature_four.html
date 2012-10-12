@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+	<h1>Feature Four Test</h1>
+
+	{% include 'module/feature_four.html' with { 'obj' : data.feature_four, 'title' : false } %}
+{% endblock %}

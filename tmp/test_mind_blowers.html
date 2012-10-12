@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+	<h1>Mind Blowers Test</h1>
+
+	{% include 'module/mind_blowers.html' with { 'title' : 'Mind Blowers', 'obj' : data.take_five, 'buttons' : true, 'pagination' : true, 'linking' : 'span' } %}
+{% endblock %}

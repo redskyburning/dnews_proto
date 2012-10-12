@@ -1,0 +1,120 @@
+/********************************************************
+	
+	Editorial
+	
+********************************************************/
+
+@import 'compass/css3';
+
+.content-share {
+	float:right;
+}
+
+.content-title {
+	margin-bottom:0px;
+}
+
+.title-sub {
+	margin-bottom:10px;
+}
+
+/********************************************************
+	List Structured
+********************************************************/
+
+$header-h:35px;
+
+.list-structured .gallery-listGallery {
+	.module-body-wrap {
+		overflow:hidden;
+	}
+
+	.slider-strip{
+		margin-top:$header-h;
+	}
+	
+	.slider-header, .slide-title, .header-ui {
+		height:$header-h;
+	}
+	
+	.slider-ui .button {
+		display:block;
+		/* margin-top:$header-h;*/
+		margin:($header-h * -1) 0px; 
+	}
+	
+	.slider-header {
+		text-align:right;
+		height:$header-h;
+		margin-bottom:$header-h * -1;
+	}
+	
+	.slide-title {
+		position:absolute;
+		top:$header-h * -1;
+	}
+	
+	.header-ui {
+		position:relative;
+		z-index:100;
+		@include display-box;
+		@include box-pack(end);
+		@include box-align(center);
+	}
+}
+
+/********************************************************
+	Image Gallery
+********************************************************/
+
+.image_gallery .header-ui {
+	@include display-box;
+	@include box-pack(justify); 
+	
+	> * {
+		display:block;
+	}
+}
+
+/********************************************************
+	Article
+********************************************************/
+
+$inset-width:200px;
+$inset-pad:25px;
+$inset-total:$inset-width + $inset-pad * 2 - 10px;
+
+.editorial-body {
+	 margin-left:$inset-total;
+	
+	.module-series, blockquote, figure, aside {
+		float:left;
+		clear:left;
+		width:$inset-width;
+		margin:0px $inset-pad $inset-pad;
+		margin-left:-1 * ($inset-total - $inset-pad + 10px);
+	}
+	
+	.module-series {
+		border:none;
+		color:#fff;
+		background:#666;
+		padding:0px;
+		
+		.module-title, .module-member {
+			padding:10px;
+		}
+		
+		.module-member:nth-child(2) {
+			background:#999;
+		}
+	} 
+}
+
+
+
+/* .inset {
+	float:left;
+	width:$inset-width;
+	margin:0px 0px 10px (-1 * $inset-width);
+} */

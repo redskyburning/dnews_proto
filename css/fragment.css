@@ -1,0 +1,65 @@
+/********************************************************
+	
+	Fragments
+	
+*********************************************************/
+/* line 9, ../scss/fragment.scss */
+.fragment-media {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  margin-bottom: 10px;
+}
+/* line 13, ../scss/fragment.scss */
+.fragment-media > * {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+/* line 17, ../scss/fragment.scss */
+.fragment-media .media-hero-wrap {
+  margin-right: 10px;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-box-flex: 1;
+  box-flex: 1;
+}
+/* line 22, ../scss/fragment.scss */
+.fragment-media .media-body a {
+  font-weight: normal;
+}
+
+/* line 27, ../scss/fragment.scss */
+.fragment-media.media-vertical {
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -ms-box-orient: vertical;
+  box-orient: vertical;
+}
+/* line 30, ../scss/fragment.scss */
+.fragment-media.media-vertical .media-hero-wrap {
+  margin-right: 0px;
+}
+
+/* line 35, ../scss/fragment.scss */
+.fragment-figure {
+  position: relative;
+  margin: 0px;
+}
+/* line 39, ../scss/fragment.scss */
+.fragment-figure .figure-caption {
+  position: absolute;
+  bottom: 0px;
+  margin: 0px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  display: block;
+}
+/* line 49, ../scss/fragment.scss */
+.fragment-figure img {
+  width: 100%;
+  height: auto;
+}

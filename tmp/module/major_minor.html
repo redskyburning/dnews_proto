@@ -1,0 +1,34 @@
+{% extends 'module/multi.html' %}
+
+{% block child_class %}module-major-minor{% endblock %}
+
+{% block module_header %}
+	{% include 'fragment/figure.html' with {
+		fragment_class	: 'major-hero',
+		fragment_href	: obj.members[0].href,
+		fragment_src	: obj.members[0].src,
+		fragment_width	: "#{ obj.members[0].width }px",
+		fragment_height	: "#{ obj.members[0].height }px"
+	} %}
+{% endblock %}
+
+{% block member_body %}
+	{% if loop.index0 > 0 %}
+		{% include 'fragment/figure.html' with {
+			fragment_class	: 'module-minor',
+			fragment_href	: mem.href,
+			fragment_src	: mem.src,
+			fragment_width	: mem.width,
+			fragment_height	: mem.height,
+		} %}
+	{% endif %}
+{% endblock %}
+
+{% block module_footer %}
+	{% include 'fragment/media.html' with {
+		fragment_class	: 'major-body',
+		fragment_href	: obj.members[0].href,
+		fragment_title	: obj.members[0].title,
+		fragment_body	: obj.members[0].body
+	} %}
+{% endblock %}

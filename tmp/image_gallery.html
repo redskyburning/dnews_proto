@@ -1,0 +1,16 @@
+{% extends 'editorial.html' %}
+
+{% block template_class %}image_gallery{% endblock %}
+
+{% block content_title %}Gallery Title{% endblock %}
+
+{% block editorial_header %}
+	{% include 'module/gallery.html' with { 
+		'obj' 			: data.orig_videos, 
+		'buttons' 		: true,
+		'buttonsExt'	: true,
+		'showCount'		: true,
+		'title'			: false,
+		'linking'		: span
+	} %}
+{% endblock %}

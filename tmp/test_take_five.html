@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block site_content %}
+	<h1>Take Five Test</h1>
+
+	{% include 'module/take_five.html' with { 'obj' : data.take_five, 'buttons' : true, 'pagination' : true, 'linking' : 'span' } %}
+{% endblock %}

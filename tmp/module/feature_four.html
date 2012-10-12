@@ -1,0 +1,15 @@
+{% extends 'module/multi.html' %}
+
+{% block child_class %}module-feature-four{% endblock %}
+
+{% block member_body %}
+	{% include 'fragment/media.html' with {
+		fragment_class	: 'module-member media-vertical',
+		fragment_href	: mem.href,
+		fragment_src	: mem.src,
+		fragment_body	: mem.title,
+		fragment_width	: mem.width,
+		fragment_height	: mem.height,
+		fragment_super	: mem.type,
+	} %}
+{% endblock %}

@@ -1,0 +1,125 @@
+/********************************************************
+	
+	Editorial
+	
+********************************************************/
+/* line 9, ../scss/editorial.scss */
+.content-share {
+  float: right;
+}
+
+/* line 13, ../scss/editorial.scss */
+.content-title {
+  margin-bottom: 0px;
+}
+
+/* line 17, ../scss/editorial.scss */
+.title-sub {
+  margin-bottom: 10px;
+}
+
+/********************************************************
+	List Structured
+********************************************************/
+/* line 28, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .module-body-wrap {
+  overflow: hidden;
+}
+/* line 32, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slider-strip {
+  margin-top: 35px;
+}
+/* line 36, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slider-header, .list-structured .gallery-listGallery .slide-title, .list-structured .gallery-listGallery .header-ui {
+  height: 35px;
+}
+/* line 40, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slider-ui .button {
+  display: block;
+  /* margin-top:$header-h;*/
+  margin: -35px 0px;
+}
+/* line 46, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slider-header {
+  text-align: right;
+  height: 35px;
+  margin-bottom: -35px;
+}
+/* line 52, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .slide-title {
+  position: absolute;
+  top: -35px;
+}
+/* line 57, ../scss/editorial.scss */
+.list-structured .gallery-listGallery .header-ui {
+  position: relative;
+  z-index: 100;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-pack: end;
+  -moz-box-pack: end;
+  -ms-box-pack: end;
+  box-pack: end;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-box-align: center;
+  box-align: center;
+}
+
+/********************************************************
+	Image Gallery
+********************************************************/
+/* line 70, ../scss/editorial.scss */
+.image_gallery .header-ui {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-box-pack: justify;
+  box-pack: justify;
+}
+/* line 74, ../scss/editorial.scss */
+.image_gallery .header-ui > * {
+  display: block;
+}
+
+/********************************************************
+	Article
+********************************************************/
+/* line 87, ../scss/editorial.scss */
+.editorial-body {
+  margin-left: 240px;
+}
+/* line 90, ../scss/editorial.scss */
+.editorial-body .module-series, .editorial-body blockquote, .editorial-body figure, .editorial-body aside {
+  float: left;
+  clear: left;
+  width: 200px;
+  margin: 0px 25px 25px;
+  margin-left: -225px;
+}
+/* line 98, ../scss/editorial.scss */
+.editorial-body .module-series {
+  border: none;
+  color: #fff;
+  background: #666;
+  padding: 0px;
+}
+/* line 104, ../scss/editorial.scss */
+.editorial-body .module-series .module-title, .editorial-body .module-series .module-member {
+  padding: 10px;
+}
+/* line 108, ../scss/editorial.scss */
+.editorial-body .module-series .module-member:nth-child(2) {
+  background: #999;
+}
+
+/* .inset {
+	float:left;
+	width:$inset-width;
+	margin:0px 0px 10px (-1 * $inset-width);
+} */

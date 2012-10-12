@@ -1,35 +1,41 @@
+/********************************************************
+	
+	Root.scss
+	Collects all scss files
+	
+********************************************************/
+
 @import 'compass/css3';
 
 @import 'normalize.scss';
 @import 'main.scss';
+@import 'text.scss';
 
-html {
-	background:#aaa;
-	margin:0px;
-	padding:0px;
-}
+@import 'structure.scss';
+@import 'site-footer.scss';
 
-body {
-	margin:0px;
-	padding:0px 10px;
-	width:1000px;
-	margin:0px auto;
-	background:#fff;
-}
+@import 'fragment.scss';
+@import 'module.scss';
+@import 'editorial.scss';
 
-h1, h2, h3, h4, h5, h6 {
-	margin:0px;
-}
-
-a, a:hover, a:visited, a:active {
-	text-decoration:none;
-	color:inherit;
-}
+/********************************************************
+	Temporary Fixes. Remove all this
+********************************************************/
 
 img {
-	background:#777;
-	width:100px;
-	height:auto;
+	background:#999;
+	/* width:100%;*/
+	/* min-width:100px; */
+	/* height:auto;  */
 }
 
-@import 'stream.scss'; 
+.ad {
+	padding:0px;
+	background:#333;
+	color:#fff;
+}
+	
+.ad-x20 {
+	width:300px;
+	height:250px;
+}
